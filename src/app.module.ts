@@ -8,6 +8,7 @@ import { SequelizeModule } from '@nestjs/sequelize';
 import { UsersController } from './users/users.controller';
 import { UsersModule } from './users/users.module';
 import { User } from './users/user.model';
+import { ProductsModule } from './products/products.module';
 @Module({
   imports: [
     CatModule,
@@ -21,6 +22,7 @@ import { User } from './users/user.model';
       database: 'nest_export',
       models: [User],
     }),
+    ProductsModule,
   ],
   controllers: [AppController, UserController, UsersController],
   providers: [AppService],
